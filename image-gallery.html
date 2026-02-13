@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+<meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Image Gallery - Income Tax Management System</title>
+    
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+<div class="gallery-container">
+        
+<h1>Image Gallery</h1>
+
+        
+<div class="slideshow-container">
+            
+<div class="slide fade" style="display: block;">
+                
+<img src="https://www.financialexpress.com/wp-content/uploads/2018/09/income-tax.jpg" alt="Image 1">
+    </div>
+            
+<div class="slide fade">
+                
+<img src="https://img.freepik.com/premium-photo/concept-taxes-paid-by-individuals-corporations-such-as-vat-income-tax-property-tax-background-your-business_29488-6283.jpg" alt="Image 2">
+            </div>
+            
+<div class="slide fade">
+                
+<img src="https://5.imimg.com/data5/SELLER/Default/2021/10/WC/XX/AM/38338941/tax-management-software.jpg" alt="Image 3">
+            
+</div>
+        
+</div>
+
+        
+<button class="prev" onclick="changeSlide(-1)">Previous</button>
+        
+<button class="next" onclick="changeSlide(1)">Next</button>
+    
+</div>
+
+    
+<footer>
+        
+<p>&copy; 2024 Income Tax Management System. All rights reserved.</p>
+    
+</footer>
+
+    
+<script>
+        
+let slideIndex = 0;
+        
+const slides = document.getElementsByClassName("slide");
+
+        
+function showSlide(index) {
+            
+for (let i = 0; i < slides.length; i++) {
+                
+slides[i].style.display = "none";
+           
+}
+           
+slides[index].style.display = "block";
+        
+}
+
+        
+function changeSlide(n) {
+            
+slideIndex += n;
+            
+if (slideIndex >= slides.length) {
+               
+slideIndex = 0;
+            
+} else if (slideIndex < 0) {
+                
+slideIndex = slides.length - 1;
+            
+}
+            
+showSlide(slideIndex);
+        
+}
+
+        
+// Initialize the first slide
+        
+showSlide(slideIndex);
+    
+</script>
+
+
+</body>
+
+</html>
